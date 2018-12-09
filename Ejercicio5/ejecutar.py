@@ -11,7 +11,7 @@ def getSparkSessionInstance(sparkConf):
 def output():
     spark = getSparkSessionInstance(sc.getConf())        
     df = spark.sql("use default")
-    df = spark.sql("select kword, sum(total) as suma from ejercicio5  where times between cast('2018-12-07 12:00:00' as timestamp)- INTERVAL 1 DAY and cast('2018-12-07 12:00:00' as timestamp) group by kword order by suma desc limit 10")
+    df = spark.sql("select kword, sum(total) as suma from ejercicio5  where times between cast('2018-12-07 12:00:00' as timestamp)- INTERVAL 1 DAY and cast('2018-12-07 12:00:00' as timestamp) group by kword order by suma desc")
     df.show()
     df.repartition(1).write.csv("/data/fndavidex4.csv")
 

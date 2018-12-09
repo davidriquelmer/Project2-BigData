@@ -39,33 +39,10 @@ def funcion(time, rdd):
     count = 0
     for tweet in iterator:
         if 'extended_tweet' in tweet:
-            #tw = json.dumps(tweet, indent=6)
-            #data.append(tw)
             producer.send('savedata', bytes(json.dumps(tweet, indent=6), "ascii"))
             count+=1
             if(count==20000):
                 break
-    """
-    rdd = sc.parallelize(data)
-    spark = getSparkSessionInstance(rdd.context.getConf())
-    if rdd.count() > 0:
-        df = spark.createDataFrame(rdd.map(lambda x: Row(tweet = x)))
-        df.createOrReplaceTempView("tweet")
-        df = spark.sql("create database if not exists default")
-        df = spark.sql("use default")
-        df = spark.sql( "select * from tweet")
-        df.write.mode("append").saveAsTable("raw_tweet1h")
-        #df = spark.sql("use default")
-        #df1 = spark.sql("select * from raw_tweet")
-        #df1.show()
-    """
-    #stream_data.pprint()
-
-    
-    #rdd = rdd.map(lambda x: json.loads(x))
-
-    #foreach l in rdd.collect():
-    #    print(l)
 
 
      

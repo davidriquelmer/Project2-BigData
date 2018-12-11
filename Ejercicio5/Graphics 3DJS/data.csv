@@ -1,0 +1,7 @@
+"id","order","score","weight","color","label"
+"TR",1,1229,1,"#9E0041","TRUMP"
+"FL",2,42,24,1,"#C32F4B","FLU"
+"HE",3,7,1,"#E1514B","HEADACHE"
+"DI",4,2,1,"#F47245","DIARRHEA"
+"ME",5,1,1,"#FB9F59","MEASLES"
+"EB",6,1,1,"#FEC574","EBOLA"

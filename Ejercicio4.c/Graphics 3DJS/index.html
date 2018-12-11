@@ -1,0 +1,132 @@
+<html>
+<head></head>
+<body>
+
+<div id="pieChart"></div>
+
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src="d3pie.min.js"></script>
+<script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Top 10 participants (most tweets posted)",
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"text": "top 10 participants (most tweets posted) in the last 12 hours - Refresh every hour",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 590,
+		"pieOuterRadius": "90%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"content": [
+			{
+				"label": "BareNoize",
+				"value": 981,
+				"color": "#2484c1"
+			},
+			{
+				"label": "featherfaceband",
+				"value": 397,
+				"color": "#0c6197"
+			},
+			{
+				"label": "sarah_koopman",
+				"value": 227,
+				"color": "#4daa4b"
+			},
+			{
+				"label": "gusto_official",
+				"value": 220,
+				"color": "#90c469"
+			},
+			{
+				"label": "UdonMarugame",
+				"value": 112,
+				"color": "#daca61"
+			},
+			{
+				"label": "Bourbon_JP",
+				"value": 105,
+				"color": "#e4a14b"
+			},
+			{
+				"label": "amosstyle_jp",
+				"value": 71,
+				"color": "#e98125"
+			},
+			{
+				"label": "housefoods_now",
+				"value": 67,
+				"color": "#cb2121"
+			},
+			{
+				"label": "AbemaTV",
+				"value": 44,
+				"color": "#830909"
+			},
+			{
+				"label": "yuhaku100",
+				"value": 37,
+				"color": "#923e99"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+});
+</script>
+
+</body>
+</html>
